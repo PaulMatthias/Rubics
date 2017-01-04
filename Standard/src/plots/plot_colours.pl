@@ -1,13 +1,17 @@
 reset
 set terminal png 
-tmax=16
+tmax=50
 set xtics -0.5,1,1.5 format ""
 set ytics -0.5,1,1.5 format ""
 
 do for [t=0:tmax]{
   set grid front xtics ytics lw 1.5 lt -1 lc rgb 'black'
   #unset tics
+if (t<10){
+  set output "colour_step0".t.".png"
+} else{
   set output "colour_step".t.".png"
+}
   set xrange [-0.5:2.5]
   set yrange [2.5:-0.5]
   set size ratio -1

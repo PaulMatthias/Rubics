@@ -105,7 +105,7 @@ void turn_lower_to_left(Cube& cube, int& number_ot){
     cube.sides[5].colours[i]=cube_tmp.sides[2].colours[8-i];
   }
   //turn the lower side left in itself
-  turn_side("left", cube.sides[2]);
+  turn_side("left", cube.sides[1]);
 
   number_ot++;
 //output of cube colours
